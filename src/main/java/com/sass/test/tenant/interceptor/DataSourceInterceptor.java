@@ -1,7 +1,6 @@
-package com.sass.test.interceptor;
+package com.sass.test.tenant.interceptor;
 
-import com.sass.test.config.SaasContextHolder;
-import com.sass.test.model.SaasNumber;
+import com.sass.test.tenant.config.TenantContextHolder;
 import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 
@@ -16,15 +15,7 @@ public class DataSourceInterceptor extends HandlerInterceptorAdapter {
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
 
-        String branch = request.getHeader("s_id");
-        switch (branch) {
-            case "saas_1":
-                SaasContextHolder.setSaasNumber(SaasNumber.SAAS_1);
-                break;
-            case "saas_2":
-                SaasContextHolder.setSaasNumber(SaasNumber.SAAS_2);
-                break;
-        }
+        TenantContextHolder.setTenantId(request.getHeader("s_id"));
         return super.preHandle(request, response, handler);
     }
 }

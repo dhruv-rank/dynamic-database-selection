@@ -1,4 +1,4 @@
-package com.sass.test.model;
+package com.sass.test.tenant.model;
 
 import javax.persistence.*;
 

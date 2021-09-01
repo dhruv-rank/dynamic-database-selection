@@ -1,7 +1,7 @@
-package com.sass.test.controller;
+package com.sass.test.tenant.controller;
 
-import com.sass.test.model.SaasUser;
-import com.sass.test.service.SaasUserService;
+import com.sass.test.tenant.model.SaasUser;
+import com.sass.test.tenant.service.SaasUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;

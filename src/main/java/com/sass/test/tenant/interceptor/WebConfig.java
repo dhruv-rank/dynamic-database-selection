@@ -1,6 +1,5 @@
-package com.sass.test.interceptor;
+package com.sass.test.tenant.interceptor;
 
-import com.sass.test.interceptor.DataSourceInterceptor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;

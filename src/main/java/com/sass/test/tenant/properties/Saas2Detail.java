@@ -1,11 +1,11 @@
-package com.sass.test.config;
+package com.sass.test.tenant.properties;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
 @Component
-@ConfigurationProperties(value = "saas1.datasource")
-public class Saas1Detail {
+@ConfigurationProperties(value = "saas2.datasource")
+public class Saas2Detail {
 
     private String url;
     private String password;
